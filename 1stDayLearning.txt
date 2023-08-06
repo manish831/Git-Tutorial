@@ -403,3 +403,45 @@ To https://github.com/manish831/Git-Tutorial.git
    65e0853..1b6605d  master -> master
 
 ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        1stDayLearning.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git add 1stDayLearning.txt
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git commit "all command and their output in this file, of 1st day of Git"
+error: pathspec 'all command and their output in this file, of 1st day of Git' did not match any file(s) known to git
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   1stDayLearning.txt
+
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git commit -m "all command and their output in this file, of 1st day of Git"
+[master a4c717b] all command and their output in this file, of 1st day of Git
+ 1 file changed, 405 insertions(+)
+ create mode 100644 1stDayLearning.txt
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.17 KiB | 2.17 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/manish831/Git-Tutorial.git
+   1b6605d..a4c717b  master -> master
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
