@@ -1,0 +1,405 @@
+ASUS@LAPTOP-7IP250KR MINGW64 ~
+$ git --v
+unknown option: --v
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--config-env=<name>=<envvar>] <command> [<args>]
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~
+$ git -v
+git version 2.41.0.windows.1
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~
+$ mkdir Project-for-Git-Tutorial
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~
+$ cd ^C
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~
+$ cd Project-for-Git-Tutorial
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial
+$ cls
+bash: cls: command not found
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial
+$ clr
+bash: clr: command not found
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial
+$ git init
+Initialized empty Git repository in C:/Users/ASUS/Project-for-Git-Tutorial/.git/
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$  ls
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ ls -a
+./  ../  .git/
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$  rm -rf .git
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial
+$ ls
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial
+$ ls -a
+./  ../
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial
+$ touch index.js
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial
+$ ls -a
+./  ../  Git-tutorial/  index.js
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial
+$ vim index.js
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial
+$ vim index.js
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial
+$ git init
+Initialized empty Git repository in C:/Users/ASUS/Project-for-Git-Tutorial/.git/
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ ls -a
+./  ../  .git/  Git-tutorial/  index.js
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ vim index.js
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Git-tutorial/
+        index.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git add index.js
+warning: in the working copy of 'index.js', LF will be replaced by CRLF the next time Git touches it
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Git-tutorial/
+
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ vim index.js
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.js
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Git-tutorial/
+
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git add index.js
+warning: in the working copy of 'index.js', LF will be replaced by CRLF the next time Git touches it
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Git-tutorial/
+
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git commit -m "added the first version"
+[master (root-commit) 76e65c8] added the first version
+ 1 file changed, 7 insertions(+)
+ create mode 100644 index.js
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Git-tutorial/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git add Git-tutorial
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Git-tutorial/command.md
+
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git commit -m "jst forget it to commit"
+[master 59df60e] jst forget it to commit
+ 1 file changed, 8 insertions(+)
+ create mode 100644 Git-tutorial/command.md
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git log
+commit 59df60e74b2265455b5020d4926b0bf40b3c79bc (HEAD -> master)
+Author: Manish Agrahari <manish.agrahari2015@gmail.com>
+Date:   Mon Aug 7 01:56:48 2023 +0530
+
+    jst forget it to commit
+
+commit 76e65c86d50e9566b145ccb343cdb9ef626190fe
+Author: Manish Agrahari <manish.agrahari2015@gmail.com>
+Date:   Mon Aug 7 01:55:20 2023 +0530
+
+    added the first version
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ ls
+Git-tutorial/  index.js
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ vim test.js
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Git-tutorial/command.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git add test.js index.js
+warning: in the working copy of 'test.js', LF will be replaced by CRLF the next time Git touches it
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ vim config.js
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   test.js
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Git-tutorial/command.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        config.js
+
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git add .
+warning: in the working copy of 'config.js', LF will be replaced by CRLF the next time Git touches it
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Git-tutorial/command.md
+        new file:   config.js
+        new file:   test.js
+
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git commit -m "added configs and test"
+[master a6506fe] added configs and test
+ 3 files changed, 6 insertions(+)
+ create mode 100644 config.js
+ create mode 100644 test.js
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git logs
+git: 'logs' is not a git command. See 'git --help'.
+
+The most similar command is
+        log
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git log
+commit a6506fed780439bdf111ccc6e505cf10f8398217 (HEAD -> master)
+Author: Manish Agrahari <manish.agrahari2015@gmail.com>
+Date:   Mon Aug 7 02:12:23 2023 +0530
+
+    added configs and test
+
+commit 59df60e74b2265455b5020d4926b0bf40b3c79bc
+Author: Manish Agrahari <manish.agrahari2015@gmail.com>
+Date:   Mon Aug 7 01:56:48 2023 +0530
+
+    jst forget it to commit
+
+commit 76e65c86d50e9566b145ccb343cdb9ef626190fe
+Author: Manish Agrahari <manish.agrahari2015@gmail.com>
+Date:   Mon Aug 7 01:55:20 2023 +0530
+
+    added the first version
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ cat index.js
+console.log("hello world !!!");
+function fetchData(url){
+        return new Promise(function(resolve, reject){
+                console.log(123);
+                resolve("happy");
+        })
+}
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        const.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git remote add origin https://github.com/manish831/Git-Tutorial.git
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git push origin master
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (13/13), 1.31 KiB | 1.31 MiB/s, done.
+Total 13 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/manish831/Git-Tutorial.git
+ * [new branch]      master -> master
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        const.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git add const.js
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git commit -m "3rd commit"
+[master 65e0853] 3rd commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 const.js
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 290 bytes | 290.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/manish831/Git-Tutorial.git
+   a6506fe..65e0853  master -> master
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ vim README.md
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git commit -m "added readme"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git add .
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git commit -m "added readme"
+[master 1b6605d] added readme
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 296 bytes | 296.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/manish831/Git-Tutorial.git
+   65e0853..1b6605d  master -> master
+
+ASUS@LAPTOP-7IP250KR MINGW64 ~/Project-for-Git-Tutorial (master)
