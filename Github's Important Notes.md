@@ -1,4 +1,4 @@
-### Syntax of `ls` command in Linux
+### Syntax of `ls` command in Linux/Git
 #### ls [option] [file/directory]:
 
 - `ls` will display the contents of the current directory. By default, ‘ls’ lists files and directories in alphabetical order.
